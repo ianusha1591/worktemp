@@ -1,0 +1,24 @@
+{{ define "header" }}{{.Names}}{{ end }}
+
+{{ define "nav1" }}Flowers{{ end }}
+
+{{ define "nav2" }}Names{{ end }}
+{{ define "article" }}Select an item from the list {{ end }}
+
+{{ define "art" }} 
+
+{{range .Employer}}
+       
+            <option>{{.Name}}</option>
+    {{end}}
+{{end}}
+
+{{ define "art1" }}
+{{range .NeeoCoverage}}
+       
+            <option>{{.Named}}</option>
+    {{end}}
+{{end}}
+
+{{define "footer" }}All the best.Thank you!!{{end}}
+
