@@ -1,0 +1,15 @@
+{{with .Fullname -}}
+ {{.FirstName}},
+{{- end}}
+
+{{if .Apps -}}
+Your interview is on
+    {{range .Apps -}}
+        {{ .Date | date}} You applied for the role of  {{ printf  .Description }}
+    {{end -}}
+{{- else}}
+good
+{{- end}}
+
+remainder: {{.Fullname | reminder }}
+
